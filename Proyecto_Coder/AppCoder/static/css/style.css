@@ -277,6 +277,14 @@ header {
     color: #ffffff;
 }
 
+.inicio .nombre_frase div ul li{
+    position: static;
+    width: 800px;
+    font-size: 1.5em;
+    right: 7em;
+    color: #ffffff;
+}
+
 @keyframes fade-in {
     from {
         opacity: 0;

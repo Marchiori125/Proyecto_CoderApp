@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block modeloquecambia %}
+    <h1 class="logo">Estudiantes</h1>
+    <nav class="navigation">
+        <a href="{% url 'Inicio' %}">Inicio</a>
+        <a href="{% url 'Cursos' %}">Cursos</a>
+        <a href="{% url 'Estudiantes' %}">Estudiantes</a>
+        <a href="{% url 'Profesores' %}">Profesores</a>
+    </nav>
+{% endblock modeloquecambia %} 
+
+{% block resultado %}
+<section class="inicio">
+    <article class="nombre_frase">
+        <div>
+            {% if cursos %}
+            <h1>Estamos buscando el curso con la camada {{camada}}</h1>
+                <ul>
+                    {% for curso in cursos%}
+                    <li>
+                        {{curso.nombre}} - {{curso.camada}}
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                <h1>No se encontro ningun curso</h1>
+            {% endif %}
+        </div>
+    </article>
+</section>
+{% endblock resultado %}
+
