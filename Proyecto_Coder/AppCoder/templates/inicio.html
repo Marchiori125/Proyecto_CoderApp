@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+    <title>Proyecto Coder</title>
+</head>
+<body>
+    <header>
+        <h2 class="logo">Logo</h2>
+        <nav class="navigation">
+            <a href="#">Inicio</a>
+            <a href="#">Cursos</a>
+            <a href="#">Estudiantes</a>
+            <a href="#">Profesores</a>
+            <a href="#">Entregables</a>
+            <button class="btnlogin-popup">Iniciar Sesion</button>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <span class="icon-close">
+            <ion-icon name="close"></ion-icon>
+        </span>
+
+        <div class="form-box login">
+            <h2>Iniciar Sesion</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                    <input type="email" required>
+                    <label for="">Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                    <input type="password" required>
+                    <label for="">Contraseña</label>
+                </div>
+                <div class="remember-forgot">
+                    <label for=""><input type="checkbox">Recordarme</label>
+                    <a href="#">Olvido su contraseña?</a>
+                </div>
+                <button type="submit" class="btn">Iniciar Sesion</button>
+                <div class="login-register"><p>No tienes cuenta?<a href="#" class="register-link">Registrarse</a></p></div>
+            </form>
+        </div>
+        <div class="form-box register">
+            <h2>Registrarse</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                    <input type="text" required>
+                    <label for="">Usuario</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                    <input type="email" required>
+                    <label for="">Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                    <input type="password" required>
+                    <label for="">Contraseña</label>
+                </div>
+                <button type="submit" class="btn">Registrarse</button>
+                <div class="login-register"><p>Ya tienes cuenta?<a href="#" class="login-link">Iniciar Sesion</a></p></div>
+            </form>
+        </div>
+    </div>
+
+    <section class="inicio">
+        <article class="nombre_frase">
+            <div>
+                <h1>Nuestra web intermedia de Django - CoderHouse</h1>
+            </div>
+        </article>
+    </section>
+
+    <script src="{% static 'js/script.js' %}"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
